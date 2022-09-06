@@ -4,12 +4,14 @@ import Utils.MyUtils;
 import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.core.util.RandomUtil;
 import leetcodeHot100.Ti03;
+import leetcodeHot100.Ti04;
 import leetcodeHot100.t01;
 import org.junit.Test;
 import pojo.ListNode;
 
 import javax.lang.model.SourceVersion;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class t01test {
     @Test
@@ -35,35 +37,23 @@ public class t01test {
     }
 
     @Test
-    public void tt(){
-        int n = RandomUtil.randomInt(1, 10);
-        int q = RandomUtil.randomInt(1,10);
-        System.out.println("n = " + n);
-        System.out.println("q = " + q);
-        int[] my = RandomUtil.randomInts(n);
-        int[] other = RandomUtil.randomInts(n);
-        Arrays.sort(my);
-        int[] myh= new int[n];
-        for (int i = 0; i < n; i++) {
-            myh[i] = my[n-1-i];
-        }
-        Arrays.sort(other);
+    public void tst04(){
+        Ti04 t = new Ti04();
+        String s1 = "[2]" ;
+        String s2 =  "[]";
+        int[] a1 = MyUtils.stringToIntegerArray(s1);
+        int[] a2 = MyUtils.stringToIntegerArray(s2);
+        t.findMedianSortedArrays(a1,a2);
+    }
 
-        System.out.println(Arrays.toString(myh));
-        System.out.println(Arrays.toString(other));
-        while(q-->0){
-            int a = RandomUtil.randomInt(-5,5);
-            int b = RandomUtil.randomInt(-5,5);
-            System.out.println("a = " + a+ " b = "+b);
-            int ans = 0;
-            for (int i = 0; i < n; i++) {
-                int flag = myh[i] * a - other[i] * b;
-                if(flag<=0)
-                    break;
-                ans += flag;
-            }
-            System.out.println(ans);
-        }
+    @Test
+    public void tt(){
+        Integer a =1;
+        Integer b = new Integer(1);
+        Integer c = Integer.valueOf(1);
+        System.out.println(a==b);
+        System.out.println(a==c);
+        System.out.println(b==c);
     }
 }
 

@@ -62,6 +62,13 @@ public class t01test {
     }
 
     @Test
+    public void tst32(){
+        Ti32 t =new Ti32();
+        int res = t.longestValidParentheses("(()");
+        System.out.println(res);
+    }
+
+    @Test
     public void tt(){
         Integer a =1;
         Integer b = new Integer(1);

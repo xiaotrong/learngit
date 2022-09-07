@@ -3,14 +3,13 @@ package leetHot100Test;
 import Utils.MyUtils;
 import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.core.util.RandomUtil;
-import leetcodeHot100.Ti03;
-import leetcodeHot100.Ti04;
-import leetcodeHot100.t01;
+import leetcodeHot100.*;
 import org.junit.Test;
 import pojo.ListNode;
 
 import javax.lang.model.SourceVersion;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class t01test {
@@ -44,6 +43,22 @@ public class t01test {
         int[] a1 = MyUtils.stringToIntegerArray(s1);
         int[] a2 = MyUtils.stringToIntegerArray(s2);
         t.findMedianSortedArrays(a1,a2);
+    }
+
+    @Test
+    public void tst15(){
+        int[] ints = MyUtils.stringToIntegerArray("[-1,0,1,2,-1,-4]");
+        Ti15 t = new Ti15();
+        List<List<Integer>> lists = t.threeSum(ints);
+        System.out.println(lists.toString());
+    }
+
+
+    @Test
+    public void tst17(){
+        Ti17 t = new Ti17();
+        List<String> lists = t.letterCombinations("23");
+        System.out.println(lists.toString());
     }
 
     @Test

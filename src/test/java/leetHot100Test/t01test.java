@@ -1,16 +1,13 @@
 package leetHot100Test;
 
 import Utils.MyUtils;
-import cn.hutool.core.util.ArrayUtil;
-import cn.hutool.core.util.RandomUtil;
-import leetcodeHot100.*;
+import leetcodeHot100.HUAWEI.leetcode1190;
+import leetcodeHot100.hot100.*;
 import org.junit.Test;
 import pojo.ListNode;
 
-import javax.lang.model.SourceVersion;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
+import java.util.TreeMap;
 
 public class t01test {
     @Test
@@ -69,13 +66,37 @@ public class t01test {
     }
 
     @Test
+    public void tst33(){
+        Ti33 t = new Ti33();
+        System.out.println(t.search(MyUtils.stringToIntegerArray("[3,1]"), 1));
+    }
+
+    @Test
     public void tt(){
-        Integer a =1;
-        Integer b = new Integer(1);
-        Integer c = Integer.valueOf(1);
-        System.out.println(a==b);
-        System.out.println(a==c);
-        System.out.println(b==c);
+//        Integer a =1;
+//        Integer b = new Integer(1);
+//        Integer c = Integer.valueOf(1);
+//        System.out.println(a==b);
+//        System.out.println(a==c);
+//        System.out.println(b==c);
+//        String str = "WellcomToThunderSoft";
+//        System.out.println(str.substring(4,7));
+        TreeMap<Integer,String> map = new TreeMap<>();
+        map.put(1,"a");
+        map.put(2,"d");
+        map.put(3,"c");
+        map.replace(3,"b");
+        System.out.println(map.toString());
+    }
+
+    @Test
+    public void tst39(){
+        new Ti39().combinationSum(MyUtils.stringToIntegerArray("[2,3,6,7]"),7);
+    }
+
+    @Test
+    public void tst1190(){
+        System.out.println(new leetcode1190().reverseParentheses("(u(love)i)"));
     }
 }
 

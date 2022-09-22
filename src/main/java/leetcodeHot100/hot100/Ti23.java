@@ -1,4 +1,4 @@
-package leetcodeHot100;
+package leetcodeHot100.hot100;
 
 import pojo.ListNode;
 

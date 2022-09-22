@@ -1,4 +1,4 @@
-package leetcodeHot100;
+package leetcodeHot100.hot100;
 
 /**
  * @descriprion: https://leetcode.cn/problems/container-with-most-water/
